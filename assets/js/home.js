@@ -5,8 +5,6 @@ let SongData = {
     song_length: 0,
 };
 
-
-
 function updateLeftBoxContent(title, description, CAT) {
 
     document.getElementById('left-title').innerText = title;
@@ -32,10 +30,6 @@ function updateRightBoxWithClock() {
     // Update the right box content with the clock
     document.getElementById('right-current-time').innerText = `Current Time (EST): ${formattedTime}`;
 }
-
-
-
-
 
 // Helper function to format time components (add leading zero)
 function formatTimeComponent(timeComponent) {
@@ -70,9 +64,6 @@ function handlePeriodicUpdate(songData) {
     // Update the progress bar
     updateProgressBar(progress);
 }
-
-
-
 
 async function FetchAndUpdateData() {
     try {
@@ -143,21 +134,13 @@ async function FetchAndUpdateData() {
     } catch (error) {
         console.error('Error fetching data:', error.message);
     }
-
-
-
 }
-
-
 
 setInterval(() => {
     FetchAndUpdateData()
 }, 5000);
 
-
-
 FetchAndUpdateData()
-
 
 // Function to fetch a random video URL
 async function loadVideoOrControl() {
